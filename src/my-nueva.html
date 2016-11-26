@@ -1,0 +1,32 @@
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-input/iron-input.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<!-- <link rel="import" href="shared-styles.html"> -->
+
+
+<dom-module id="nueva-pagina">
+  <template>
+    <!-- <input type="text" value="{{entrada::input}}"> -->
+    <!-- Entrada: <input is="iron-input" bind-value="{{entrada}}"> -->
+    <paper-input value="{{entrada}}" label="aqui es la entrada de datos"></paper-input>
+    <div style="border: 1px solid black">
+      [[entrada]]
+    </div>
+
+  </template>
+  <script>
+    Polymer({
+      is: "nueva-pagina",
+      ready: function(){
+        console.log("El elemento ah terminado de crearse");
+      },
+      properties: {
+        entrada: String
+      },
+      saludar: function(){
+        console.log("Polyer")
+      }
+    })
+  </script>
+</dom-module>

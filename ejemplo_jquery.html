@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Ejemplo con Jequery </title>
+</head>
+<body>
+  <h1> ejmplo con Jeuqry</h1>
+  Entrada: <input type="text" id="entrada">
+  Salida: <div id="salida"></div>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script>
+    salida = $("#salida");
+    $("#entrada").on('keypress', function(event){
+      salida.html(event.target.value);
+    })
+  </script>
+</body>
+</html>
